@@ -17,7 +17,7 @@ To generate a passphrase with a Diceware word list (see the [official site](http
 - repeat until [six words](http://world.std.com/~reinhold/dicewarefaq.html#howlong) have been generated for a standard passphrase, or seven words for a high-value passphrase
 - use the words, in the order they were generated and with spaces between them, as your passphrase
 
-For instance, your password might be: `toby hew aught neighed rumoured spies son`.
+For instance, your passphrase might be: `toby hew aught neighed rumoured spies son`.
 
 It may be tempting to alter the passphrase to make it more memorable. **Do not remove or reorder any words or characters**, for it will compromise the randomness (and therefore security) of the phrase.
 
