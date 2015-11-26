@@ -23,4 +23,6 @@ You cannot remove or change the order of any words or characters without comprom
 
 Alternatively, you can generate a passphrase using a computer. This is strongly [cautioned against](http://world.std.com/~reinhold/dicewarefaq.html#computer) but should be sound if properly done. The Diceware author recommends using a slightly longer list (8192 words, to make it a whole power of two) for computer generation; `eyeware8k` (also found in the files above) was created for this purpose.
 
+**Many methods of random number generation are insufficiently random for strong passphrase generation. Be sure to choose a well-regarded (by security experts) source of randomness, as in the example below.**
+
 On Linux, one may run the command `shuf --random-source=/dev/random -r -n 6 < eyeware8k` to obtain a 6-word passphrase from the file "eyeware8k". The source of randomness here is the special file `/dev/random`, a random number generator built into the Linux kernel. It is considered [fully reliable](https://wiki.archlinux.org/index.php/Random_number_generation) for cryptographic generation.
