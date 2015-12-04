@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [[ $# -eq 0 || "$1" = "-h" || "$1" = "--help" ]]; then
+    echo "eyeware generates a diceware passphrase using a wordlist drawn from"
+    echo "The Lord of the Rings."
+    echo
+    echo "USAGE"
+    echo " eyeware [passphrase word length]"
+    echo
+    echo "EXAMPLE"
+    echo " eyeware 7    (generates a 7-word passphrase)"
+    echo
+    echo "NOTES"
+    echo " - the diceware author recommends a 6-word passphrase for standard"
+    echo "   accounts, 7-word for high-value accounts"
+    echo " - see http://world.std.com/~reinhold/diceware.html for full details"
+    echo "   on diceware"
+    echo " - see https://github.com/nightsense/eyeware for full details on"
+    echo "   eyeware"
+    exit 0
+fi
+
+if [ $# -gt 1 ]; then
+    echo "too many arguments; see 'eyeware --help'"
+    exit 1
+fi
+
+if echo $1 | grep [^0-9] > /dev/null; then
+    echo "argument must be a number; see 'eyeware --help'"
+    exit 1
+fi
+
+shuf --random-source=/dev/random -r -n $1 < /usr/share/eyeware/eyeware8k
