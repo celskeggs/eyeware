@@ -33,4 +33,4 @@ Alternatively, one can generate a passphrase [using a computer](http://world.std
 
 **Many methods of random number generation are insufficiently random for strong passphrase generation. Be sure to choose a quality source of randomness, such as in the example below.**
 
-On Linux, one may run the command `for i in {1..7}; do shuf --random-source=/dev/random -n 1 < eyeware8k.txt; done` to obtain a 7-word passphrase from the file "eyeware8k". The source of randomness here is the special file `/dev/random`, a random number generator built into the Linux kernel. It is considered [fully reliable](https://wiki.archlinux.org/index.php/Random_number_generation) for cryptographic generation.
+On Linux, one may run the command `for i in {1..7}; do shuf --random-source=/dev/random -n 1 < eyeware8k; done` to obtain a 7-word passphrase from the file "eyeware8k". The source of randomness here is the special file `/dev/random`, a random number generator built into the Linux kernel. It is considered [fully reliable](https://wiki.archlinux.org/index.php/Random_number_generation) for cryptographic generation.
